@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4</title>
+
+    <script>
+
+        function Hs(){
+            document.getElementById("conteiner1").innerHTML = ['<h1>Texto com o uso da tag h1 </h1>' + '<br>'+
+        '<h2>Texto com o uso da tag h2 </h2>'+ '<br>'+ '<h3>Texto com o uso da tag h3 </h3>' + '<br>' + '<p> <b>Antes:</b>  Texto sem o uso da tag h1 </p>'    ]
+        }
+
+        function textos(){
+            document.getElementById("conteiner2").innerHTML = [
+        '<p> <b> usando a TAG b tag </b> </p>'  + '<p> <i> usando a TAG i tag </i> </p>' + '<p> <b>Antes:</b> sem o uso de nenhuma tag </p>' ]
+        }
+
+        function quebra(){
+            document.getElementById("conteiner3").innerHTML = [
+                '<p> Este é um Exemplo </p> <br> usando <br> <br> <br> a quebra de linhas </p>' + '<p> <b>Antes:</b> Esta é uma frase sem o uso de uma tag para a quebra de linhas </p>'
+            ]
+        }
+
+        function listas(){
+            document.getElementById("conteiner4").innerHTML = [
+            '<ol>'+
+                '<li>processador AMD</li>' +
+                '<li>Memoria ram Corsair </li>'+
+                '<li>RTX 3060</li>'+
+            '</ol>' + '<br> <br>' + '<p> <b>Antes lista NÃO ordenada:</b>' + 
+
+                '<ul>' +
+                        '<li>' +
+                            'processador intel' +
+                       '</li>'+
+                       '<li>' +
+                            'memoria Ram HyperX' +
+                        '</li>' +
+                        '<li>' +
+                            'RTX 2060' +
+                        '</li>' +
+                '</ul>'
+                            ]
+        }
+
+        function linkar(){
+            document.getElementById("conteiner5").innerHTML = [
+
+            '<a href="https://www.youtube.com/">Youtube</a>' + "<br>" + '<p> <b>Antes:</b> youtube.com </p>' 
+
+            ]
+        }
+
+    </script>
+
+    <style>
+
+
+        .centro{
+            background-color: lightskyblue;
+            height: 100%;
+            width: 500px;
+            padding: 4em;
+            margin-left: 33%;
+            border-radius: 1em;
+
+
+        }
+        body{
+            background-color:gray;
+        }
+
+        h1,h2,h3, ol{
+            color: white
+        }
+
+        .titulop{
+            text-align: center;
+        }
+
+        .subtitulos{
+            font-size: 22px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="centro">
+
+    <h1 class="titulop">Lista de TAGS</h1>
+
+    <label for="titulos" class="subtitulos">Exemplo de TAGS de titulo: </label>
+
+    <p id="conteiner1">Texto sem o uso da tag h1 </p>
+
+    <input type="button" id="H" value="Alterar" onclick="Hs()">
+
+    <br><br>
+
+    <label for="textos" class="subtitulos" >Exemplo modificação de texto: </label>
+
+    <p id="conteiner2"> sem o uso de nenhuma tag</p>
+
+    <input type="button" id="strong" value="Alterar" onclick="textos()">
+
+    <br><br>
+
+    <label for="quebra" class="subtitulos" >Exemplo de quebra linha: </label>
+
+    <p id="conteiner3">Esta é uma frase sem o uso de uma tag para a quebra de linhas</p>
+
+    <input type="button" id="br" value="Alterar" onclick="quebra()">
+
+    <br><br>
+
+    <label for="listas" class="subtitulos" >Exemplo listas: </label>
+
+    <ul id="conteiner4">
+        <li>
+            processador intel
+        </li>
+        <li>
+            memoria Ram HyperX
+        </li>
+        <li>
+            RTX 2060
+        </li>
+    </ul>
+
+    <input type="button" id="listas" value="Alterar" onclick="listas()">
+
+    <br><br>
+
+    <label for="links" class="subtitulos">Exemplo de Link para paginas web</label>
+
+    <p id="conteiner5">youtube.com</p>
+
+    <input type="button" id="link" value="Alterar" onclick="linkar()">
+
+    </div>
+    
+</body>
+</html>

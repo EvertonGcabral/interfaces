@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 2</title>
+
+    <style>
+
+        *{
+            text-align: center;
+            border-radius: 1em;
+        }
+
+        .centro{
+            height: 100%;
+            width: 400px;
+            margin-left: 35%;
+            color: white;
+            background-color: black;
+            padding: 2em;
+        }
+
+        h1{
+            color: yellow;
+        }
+
+        .botao{
+            background-color: rgb(238, 238, 121);
+            font-family: 'Times New Roman', Times, serif;
+            padding: 4px;
+        }
+
+
+
+
+
+    </style>
+
+
+    <script>
+        function promocao1() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 10) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 1 Item por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function promocao2() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 15) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 2 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function promocao3() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 25) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 3 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function promocao4() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 35) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 4 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function promocao5() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 45) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 5 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function promocao6() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 60) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 6 Itens ou mais por " + resultado + " reais!" + "<br><br>";
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <div class="centro">
+
+
+        <h1>Promoção Black Friday</h1>
+
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" id="nome">
+
+
+        
+        <br><br>
+
+        <label for="valor">Valor da Etiqueta:</label>
+        <input type="text" id="valor">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="1 ITENS = 10% DE DESCONTO" onclick="promocao1()">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="2 ITENS = 15% DE DESCONTO" onclick="promocao2()">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="3 ITENS = 25% DE DESCONTO" onclick="promocao3()">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="4 ITENS = 35% DE DESCONTO" onclick="promocao4()">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="5 ITENS = 45% DE DESCONTO" onclick="promocao5()">
+        
+        <br><br>
+
+        <input class="botao" type="button" value="6 ITENS = 60% DE DESCONTO" onclick="promocao6()">
+        
+        <br><br>
+
+        <p id="resultado"></p>
+        
+    </div>
+
+</body>
+
+</html>

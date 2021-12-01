@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ex 1</title>
+    
+    <style>
+
+        body{
+
+            background-color: gray;
+
+        }
+
+        .centro{
+            background-color: lightskyblue;
+            height: 40%;
+            width: 400px;
+            padding: 3em;
+            border-radius: 2em;
+            margin-left: 33%;
+            margin-top: 10%;
+            text-align: center;
+        }
+
+        input{
+            width: 250px;
+            border-radius: 5px;
+        }
+
+        .botao {
+            width: 150px;
+            margin: 15px;
+            margin-left: 15%;
+        }
+
+        label{
+            font-size: 22px;
+        }
+
+        #valor_produto{
+            margin-left: 15px;
+        }
+
+        h1{
+            text-align: center;
+            color: white;
+        }
+
+        .resultado{
+            font-size: 22px;
+            color: white;
+        }
+
+        
+    </style>
+
+<script>
+        function promo(){
+            var produto = document.getElementById("produto").textContent;
+            var valorDoProduto = document.getElementById("valor_produto").value;
+            let resultadoPromo = parseFloat(valorDoProduto) - ( parseFloat(valorDoProduto) * 0.30)
+
+            document.getElementById("resultado").innerHTML = [ 
+            '<p>Leve 2 itens e pague: </p>' + resultadoPromo + ' reais ! ! ! '
+            ]
+        }
+</script>
+
+</head>
+<body>
+
+<div class="centro">
+
+    <h1>Lista 01 - Exercicio 1</h1>
+
+<label for="produto">Produto: </label>
+<input type="text"  id="produto">
+
+<br><br>
+
+<label for="valor">Valor: </label>
+<input type="number" id="valor_produto">
+
+<br><br>
+
+<label for="botao"></label>
+<input class="botao" type="button" value="Promoção !!" onclick="promo()">
+
+<div class="resultado"> <p id="resultado"></p> </div>
+
+</div>
+
+
+</body>
+</html>
